@@ -1,0 +1,13 @@
+{%extends "AppCoder/padre.html"%}
+{%load static%}
+{%block contenidoQueCambia%}
+
+<form method="POST">{% csrf_token %}
+    <h6> ¿Estas segurx que deseas borrar a "{{object.nombre_de_Mascota}}" de Adopciones?</h6>
+    <input type="submit" value="Eliminar"/>
+</form>
+
+<a class="btn btn-primary" href="{% url 'List'%}">¡Nooo!-Regresar a la lista</a>
+
+{%endblock%}
+

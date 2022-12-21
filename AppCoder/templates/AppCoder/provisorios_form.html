@@ -1,0 +1,19 @@
+{% extends "AppCoder/padre.html" %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+   
+<h1>Provisorio</h1>
+    <h3><small class="text-muted">¿Podes dar transito?</small></h3>
+    Ingrese datos de quien puede hacer el provisorio<
+    <form action=""    method="post">{% csrf_token %}
+        <table class="table table-hover">
+            {{form.as_table}}
+        </table>
+        <input type="submit",value="Enviar">
+     </form>
+
+     <a href="{% url 'buscarProvi'%}"> Buscar</a>
+     
+{% endblock %}

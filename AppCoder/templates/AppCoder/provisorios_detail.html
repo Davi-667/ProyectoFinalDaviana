@@ -1,0 +1,20 @@
+{% extends "AppCoder/padre.html" %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+Resultado del Detalle:
+<div class="card mb-3" style="max-width: 540px;">
+    <div class="row no-gutters">
+        <div class="card-body">
+            <h5 class="card-title ">{{provisorio.nombreProvisorio}}</h5>
+            <p class="card-text">Su contacto es:  {{provisorio.telefono}}. Tiene en su hogar: {{provisorio.animalesenCasa}} y recibe animales de genero/tipo: {{provisorio.genero}}.</p>
+        </div>
+    </div>
+
+
+</div>
+
+<a href="{% url 'ListP'%}">Regresar</a>
+    
+{% endblock %}

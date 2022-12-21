@@ -1,0 +1,22 @@
+{% extends "AppCoder/padre.html" %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+
+<h1>Encontrados</h1>
+    <h3><small class="text-muted">¿Encontraste un animal?</small></h3>
+    Ingresar tus datos:
+    
+    <form action=""    method="post">{% csrf_token %}
+        <table class="table table-hover">
+            {{form.as_table}}
+        </table>
+        <input type="submit",value="Enviar">
+     </form>
+
+     <a href="{% url 'ListE'%}">Regresar a la lista</a>
+
+     
+{% endblock %}
+

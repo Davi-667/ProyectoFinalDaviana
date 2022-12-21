@@ -1,0 +1,27 @@
+{% extends "AppCoder/padre.html" %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+<h3> Lista de Provisorios </h3>
+<ul>
+    {% for provisorio in object_list %}
+
+   <ul style="list-style-type: circle;">
+
+     <li>{{provisorio.nombreProvisorio}}</li>
+        
+   </ul>
+     <p>
+        <a href="{% url 'DetailP' provisorio.id %}">Ver</a>
+        <a href="{% url 'EditP' provisorio.id %}">Editar</a>
+        <a href="{% url 'DeleteP' provisorio.id %}">Borrar</a>
+     </p> 
+    {%endfor%}
+
+</ul>
+
+<a class="btn btn-primary" href="{% url 'NewP' %}">Nuevo</a>
+<a href="{% url 'Inicio'%}">Inicio</a>
+{% endblock %}
+ 

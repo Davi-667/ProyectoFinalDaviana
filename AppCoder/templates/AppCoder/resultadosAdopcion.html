@@ -1,0 +1,22 @@
+{% extends "AppCoder/padre.html" %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+
+<h5>Resultado segun el nombre del animal:</h5>
+    {%for Adop in nombre_de_Mascota%}
+           
+        <div class="card mb-3" style="max-width: 540px;">
+            <div class="row no-gutters">
+                <div class="card-body">
+                    <h5 class="card-title "> {{Adop.nombre_de_Mascota}}</h5>
+                    <p class="card-text"> Tiene {{Adop.edad}} años, es de tipo {{Adop.tipo}} y su género es {{Adop.genero}}.
+                        En cuanto a su castracion: {{Adop.castracion}}. Quien está a cargo es {{Adop.nombre_del_Tutelar}}.</p>
+                    <h5 class="card-title "> Contacto: </h5>
+                    <p class="card-text"> Telefono:   {{Adop.telefono}}   y su Mail:  {{Adop.mail}} </p>
+                </div>
+            </div>
+        </div>
+    {%endfor%}
+{% endblock %}

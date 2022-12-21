@@ -1,0 +1,50 @@
+{%extends "AppCoder/padre.html"%}
+{%load static%}
+{%block contenidoQueCambia%}
+
+
+
+    <!--Aquí va lo que cambia, y lo asociado a está vista :) -->
+        
+        <center><p><h3>Bienvenidxs</h3></p>
+                 <p class="h4">
+                    <p>
+                    Somos Mymba, un espacio creado para ayudar a los animales. Aqui tendras diferentes sectores, entre ellos: Adopciones, Provisorios, y uno de animales Perdidos/Encontrados.
+                        <p>
+                        Podes ayudar a los animales de diferentes maneras: 
+                    </p>
+
+                <ins><h1 class="display-6"> ADOPCIONES </h1></ins>
+
+                    <a class="navbar-brand" href="{% url '¿Queres dar en Adopcion?' %}">♥¿Queres dar en Adopcion?</a>
+                    <p>
+                    </p>
+                    <a class="navbar-brand" href="{% url 'Buscar' %}">♥¿Queres Adoptar?</a>
+                    <p>
+                    </p>
+                    <a class="navbar-brand" href="{% url 'List' %}">♥Lista de animales en adopción </a>
+                    <p>
+                    </p>
+                    <ins><h1 class="display-6"> PROVISORIOS</h1></ins>
+
+                    <a class="navbar-brand" href="{% url 'Provi' %}">♥¿Ofreces Provisorio?</a>
+                    <p>
+                    </p>
+                    <a class="navbar-brand" href="{% url 'buscarProvi' %}">♥¿Buscas Provisorio?</a>
+                    <p>
+                    </p>
+                    <a class="navbar-brand" href="{% url 'ListP' %}">♥Lista de provisorios </a>
+                    <ins><h1 class="display-6"> PERDIDOS/ENCONTRADOS</h1></ins>
+                    <a class="navbar-brand" href="{% url 'Encontre' %}">♥Encontre</a>
+                    <p>
+                    </p>
+                    <a class="navbar-brand" href="{% url 'buscarEncontrado' %}">♥¿Buscas alguien que retiene un animal?</a>
+                    <p>
+                    </p>
+                    <a class="navbar-brand" href="{% url 'ListE' %}">♥Lista de animales encontrados por nombre de quien retiene </a>
+                </p> </center>
+            
+           
+        
+{%endblock%}
+

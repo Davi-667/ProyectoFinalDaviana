@@ -1,0 +1,24 @@
+{% extends "AppCoder/padre.html" %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+
+    <h3> Animal encontrado por: </h3>
+        <ul>
+            {% for encontrados in object_list %}
+
+
+                <ul style="list-style-type: circle;"> <li>{{encontrados.nombreRetiene}}</li></ul>
+           
+              <p>
+                <a href="{% url 'DetailE' encontrados.id %}">Ver</a>
+                <a href="{% url 'EditE' encontrados.id %}">Editar</a>
+                <a href="{% url 'DeleteE' encontrados.id %}">Borrar</a>
+              </p>
+            {% endfor %}
+
+        </ul>     
+<a class="btn btn-primary" href="{% url 'NewE' %}">Nuevo</a>
+<a href="{% url 'Inicio'%}">Inicio</a>
+{% endblock %}

@@ -1,0 +1,21 @@
+{% extends "AppCoder/padre.html" %}
+
+{% load static %}
+{% block contenidoQueCambia %}
+<h3>Resultado del Detalle:</h3>
+
+    <div class="card mb-3" style="max-width: 540px;">
+        <div class="row no-gutters">
+            <div class="card-body">
+                <h5 class="card-title "> Retiene: {{encontrados.nombreRetiene}} </h5>
+                <p class="card-text"> Su contacto es:  {{encontrados.telefono}}.</p>
+            </div>
+        </div>
+
+
+    </div>
+
+<a href="{% url 'ListE'%}">Regresar a la lista</a>
+    
+{% endblock %}
+

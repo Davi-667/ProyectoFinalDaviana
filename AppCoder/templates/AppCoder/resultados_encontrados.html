@@ -1,0 +1,19 @@
+{% extends "AppCoder/padre.html" %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+
+<h5>Resultado segun el nombre de quien retiene:</h5>
+    {%for encontrados in nombreRetiene%}       
+        <div class="card mb-3" style="max-width: 540px;">
+            <div class="row no-gutters">
+                <div class="card-body">
+                    <h5 class="card-title ">{{encontrados.nombreRetiene}}</h5>
+                    <p class="card-text">Su contacto es:  {{encontrados.telefono}}.</p>
+                </div>
+            </div>
+        </div>
+    {%endfor%}
+{% endblock %}
+    

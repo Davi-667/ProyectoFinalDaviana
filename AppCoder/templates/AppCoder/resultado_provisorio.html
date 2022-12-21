@@ -1,0 +1,23 @@
+{% extends "AppCoder/padre.html" %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+
+<h5>Resultado segun el nombre del provisorio:</h5>
+    {%for provisorios in nombreProvisorio%}
+        <div class="card mb-3" style="max-width: 540px;">
+            <div class="row no-gutters">
+                <div class="card-body">
+                    <h5 class="card-title ">{{provisorios.nombreProvisorio}}</h5>
+                    <p class="card-text">Su contacto es:  {{provisorios.telefono}}. Tiene en su hogar: {{provisorios.animalesenCasa}} y recibe animales de genero/tipo: {{provisorios.genero}}.</p>
+                </div>
+            </div>
+        </div>
+
+
+
+    {%endfor%}
+
+
+{% endblock %}

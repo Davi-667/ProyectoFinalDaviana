@@ -1,0 +1,16 @@
+{% extends "AppCoder/padre.html" %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+
+<h5>♥Aquí buscas el animal por su nombre</h5>
+<p> 
+    <form action="/AppCoder/buscar/" method="GET">{% csrf_token %}
+        <input type="text"  name="nombre_de_Mascota" id="nombre_de_Mascota">
+        <input type="submit" value="Buscar">
+     </form>
+</p>
+  
+
+{% endblock %}

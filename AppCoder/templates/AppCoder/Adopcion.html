@@ -1,0 +1,22 @@
+{%extends "AppCoder/padre.html"%}
+{%load static%}
+{%block contenidoQueCambia%}
+
+    <!--Aquí va lo que cambia, y lo asociado a está vista :) -->
+        <h1>Adopciones</h1>
+        <h3><small class="text-muted">¿Querés dar en adopcion un animal?</small></h3>
+       
+        Ingresar los datos del animal y luego los tuyos:
+        <p><em>   A tener en cuenta:  edad = si tiene meses ingresar 0. y luego los meses // Tipo  = canino, felino, ave, etc.//</em></p>
+        <form action=""  method="post">{% csrf_token %}
+            <table class="table table-hover">
+                {{miFormulario.as_table}}
+            </table>
+            <input type="submit" value="Enviar">
+        </form>
+           
+           
+
+
+        
+{%endblock%}
